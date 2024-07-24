@@ -1,0 +1,42 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "license": "MIT",
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "scripts": {
+    "build": "strapi build",
+    "deploy": "strapi deploy",
+    "develop": "strapi develop & node websocket.js",
+    "start": "strapi start",
+    "start:ws": "node websocket.js",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "4.25.4",
+    "@strapi/plugin-i18n": "4.25.4",
+    "@strapi/plugin-users-permissions": "^4.25.4",
+    "@strapi/provider-upload-cloudinary": "^4.25.5",
+    "@strapi/strapi": "4.25.4",
+    "ajv": "^8.8.2",
+    "ajv-draft-04": "^1.0.0",
+    "better-sqlite3": "8.6.0",
+    "cors": "^2.8.5",
+    "pg": "^8.12.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "styled-components": "5.3.3",
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "34bc0a7c-e003-4bb1-8e15-fea45c7ca115"
+  }
+}
