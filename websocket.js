@@ -1,6 +1,11 @@
 const WebSocket = require("ws");
+const dotenv = require("dotenv");
 
-const wss = new WebSocket.Server({ port: 8080 });
+dotenv.config();
+
+const port = parseInt(process.env.WS_PORT || "8080", 10);
+
+const wss = new WebSocket.Server({ port });
 
 wss.on("connection", (ws) => {
   console.log("Client connected");
@@ -34,4 +39,4 @@ wss.on("connection", (ws) => {
   });
 });
 
-console.log("WebSocket server is running on ws://localhost:8080");
+console.log(`WebSocket server is running on ws://localhost:${port}`);

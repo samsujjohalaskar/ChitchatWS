@@ -15,7 +15,7 @@ module.exports = [
     name: "strapi::cors",
     config: {
       enabled: true,
-      origin: ["https://chitchatlive.vercel.app"],
+      origin: [process.env.CLIENT_ORIGIN],
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
       headers: ["Content-Type", "Authorization"],
     },
