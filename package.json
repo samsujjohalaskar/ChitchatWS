@@ -8,7 +8,7 @@
     "name": "A Strapi developer"
   },
   "scripts": {
-    "build": "concurrently \"npm run build:strapi\" \"npm run build:websocket\"",
+    "build": "strapi build", 
     "start": "concurrently \"npm run strapi\" \"npm run websocket\"",
     "deploy": "strapi deploy",
     "develop": "strapi develop & node websocket.js",
